@@ -460,7 +460,67 @@ release/qextserialbase.o: qextserialbase.cpp qextserialbase.h \
 		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/QMutex
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/qextserialbase.o qextserialbase.cpp
 
-release/camera.o: camera.cpp camera.h
+release/camera.o: camera.cpp camera.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/QObject \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qobject.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qobjectdefs.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qnamespace.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qglobal.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qconfig-bootstrapped.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qconfig.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qtcore-config.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qsystemdetection.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qprocessordetection.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qcompilerdetection.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qtypeinfo.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qsysinfo.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qlogging.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qflags.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qatomic.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qbasicatomic.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qatomic_bootstrap.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qgenericatomic.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qatomic_cxx11.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qatomic_msvc.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qglobalstatic.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qmutex.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qnumeric.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qversiontagging.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qobjectdefs_impl.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qstring.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qchar.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qbytearray.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qrefcount.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qarraydata.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qstringliteral.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qstringalgorithms.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qstringview.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qstringbuilder.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qlist.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qalgorithms.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qiterator.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qhashfunctions.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qpair.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qbytearraylist.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qstringlist.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qregexp.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qstringmatcher.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qcoreevent.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qscopedpointer.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qmetatype.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qvarlengtharray.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qcontainerfwd.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qobject_impl.h \
+		posix_qextserialport.h \
+		qextserialbase.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/QIODevice \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qiodevice.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/QFile \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qfile.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qfiledevice.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/QThread \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qthread.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/QMutex
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/camera.o camera.cpp
 
 release/MatViewer.o: MatViewer.cpp include/MatViewer.hpp \
@@ -539,7 +599,8 @@ release/main.o: main.cpp include/TYCoordinateMapper.h \
 		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/QThread \
 		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/qthread.h \
 		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/QMutex \
-		camera.h
+		camera.h \
+		/usr/local/Trolltech/Qt-5.10.0-rk64one/include/QtCore/QObject
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release/main.o main.cpp
 
 release/moc_qextserialbase.o: release/moc_qextserialbase.cpp 

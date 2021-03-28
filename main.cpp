@@ -18,12 +18,10 @@
 #include "TYThread.hpp"
 #include "collect.h"
 #include "camera.h"
-#include "posix_qextserialport.h"
 
 using namespace std;
 
 CAMERA camera(10);
-Posix_QextSerialPort com("/dev/ttyUSB0", QextSerialBase::Polling);
 
 static double distant;
 static volatile bool fakeLock = false; // NOTE: fakeLock may lock failed
@@ -66,8 +64,7 @@ void frameCallback(TY_FRAME_DATA* frame, void* userdata)
     int key = cv::waitKey(300);
     switch (key & 0xff) {
     case 0xff:
-        camera.resShow();
-        com.write("hello world", 12);
+        camera.processResult();
         break;
     case 'q':
         pData->exit = true;
@@ -95,13 +92,6 @@ void eventCallback(TY_EVENT_INFO* event_info, void* userdata)
 
 int main(int argc, char* argv[])
 {
-    com.setBaudRate(BAUD9600);
-    com.setDataBits(DATA_8);
-    com.setParity(PAR_NONE);
-    com.setStopBits(STOP_1);
-    com.setFlowControl(FLOW_OFF);
-    com.open(QIODevice::ReadWrite);
-
     std::string ID, IP;
     TY_INTERFACE_HANDLE hIface = NULL;
     TY_DEV_HANDLE hDevice = NULL;
